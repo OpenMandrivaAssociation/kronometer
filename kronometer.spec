@@ -38,7 +38,9 @@ make -C build DESTDIR=%buildroot install
 
 chmod -x %{buildroot}%{_kde_applicationsdir}/%{name}.desktop
 
-%files
+%find_lang %{name}
+
+%files -f %{name}.lang
 %doc README
 %{_kde_docdir}/HTML
 %{_kde_bindir}/%{name}
