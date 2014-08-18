@@ -1,7 +1,7 @@
 Name:		kronometer
 Summary:	Stopwatch application built for the KDE
 Version:	1.4.2
-Release:	1
+Release:	1.1
 Group:		Graphical desktop/KDE
 License:	GPLv2
 Url:		http://www.aelog.org/
