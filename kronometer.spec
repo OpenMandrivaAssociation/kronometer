@@ -7,9 +7,9 @@ License:	GPLv2
 Url:		http://www.aelog.org/
 Source0:	http://download.kde.org/stable/kronometer/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
-BuildRequires:	pkfconfig(Qt5Core)
-BuildRequires:	pkfconfig(Qt5Gui)
-BuildRequires:	pkfconfig(Qt5Widgets)
+BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5Gui)
+BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	cmake(KF5Config)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5I18n)
