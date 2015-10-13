@@ -1,4 +1,3 @@
-removed_sources:
-  kronometer-1.2.2.tar.gz: e57f3c545aab1f2934de4a1816eb009b956db063
+---
 sources:
-  kronometer-1.4.2.tar.xz: 3fc2ef2038562b0e352d4f65b38d7287a32130e4
+  kronometer-2.0.1.tar.xz: 2b4be09d605003dc39650934cd98b5701205443c
