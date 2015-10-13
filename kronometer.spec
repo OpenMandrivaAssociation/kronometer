@@ -44,9 +44,10 @@ Lap times export.
 
 %files -f %{name}.lang
 %doc README
-%{_kde_docdir}/HTML
-%{_kde_bindir}/%{name}
-%{_kde_applicationsdir}/%{name}.desktop
-%{_kde_datadir}/apps/*
-%{_kde_datadir}/*.kcfg
-%{_kde_iconsdir}/*/*/*/kronometer.svgz
+%{_bindir}/%{name}
+%{_datadir}/appdata/org.kde.kronometer.appdata.xml
+%{_datadir}/applications/org.kde.kronometer.desktop
+%{_datadir}/config.kcfg/kronometer.kcfg
+%{_docdir}/HTML/*/kronometer/*
+%{_iconsdir}/hicolor/scalable/apps/*.svgz
+%{_datadir}/kxmlgui5/kronometer/kronometerui.rc
