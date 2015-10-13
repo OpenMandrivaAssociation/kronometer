@@ -1,14 +1,20 @@
 Name:		kronometer
 Summary:	Stopwatch application built for the KDE
-Version:	1.4.2
-Release:	2
+Version:	2.0.1
+Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2
 Url:		http://www.aelog.org/
 Source0:	http://download.kde.org/stable/kronometer/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	kdelibs4-devel
-BuildRequires:	desktop-file-utils
-BuildRequires:	cmake
+BuildRequires:	cmake(ECM)
+BuildRequires:	pkfconfig(Qt5Core)
+BuildRequires:	pkfconfig(Qt5Gui)
+BuildRequires:	pkfconfig(Qt5Widgets)
+BuildRequires:	cmake(KF5Config)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5I18n)
+BuildRequires:	cmake(KF5WidgetsAddons)
+BuildRequires:	cmake(KF5XmlGui)
 
 %description
 Kronometer is a stopwatch application built 
@@ -25,18 +31,13 @@ Lap times export.
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-mkdir build && cd build
-cmake -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix` \
-  -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
-
-%make
+%ninja -C build
 
 %install
-make -C build DESTDIR=%buildroot install
-
-chmod -x %{buildroot}%{_kde_applicationsdir}/%{name}.desktop
+%ninja_install -C build
 
 %find_lang %{name}
 
