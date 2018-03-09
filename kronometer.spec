@@ -16,6 +16,7 @@ BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5WidgetsAddons)
 BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	cmake(KF5Crash)
 
 %description
 Kronometer is a stopwatch application built 
