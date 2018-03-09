@@ -1,6 +1,6 @@
 Name:		kronometer
 Summary:	Stopwatch application built for the KDE
-Version:	2.0.1
+Version:	2.1.5
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2
@@ -40,14 +40,16 @@ Lap times export.
 %install
 %ninja_install -C build
 
-%find_lang %{name}
+%find_lang %{name} --with-man
 
 %files -f %{name}.lang
 %doc README
 %{_bindir}/%{name}
-%{_datadir}/appdata/org.kde.kronometer.appdata.xml
+%{_datadir}/metainfo/org.kde.kronometer.appdata.xml
 %{_datadir}/applications/org.kde.kronometer.desktop
 %{_datadir}/config.kcfg/kronometer.kcfg
 %{_docdir}/HTML/*/kronometer/*
 %{_iconsdir}/hicolor/scalable/apps/*.svgz
+%{_iconsdir}/hicolor/*/apps/*.png
 %{_datadir}/kxmlgui5/kronometer/kronometerui.rc
+%{_mandir}/man1/%{name}.1*
