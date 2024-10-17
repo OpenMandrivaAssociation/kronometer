@@ -4,7 +4,7 @@ Version:	2.2.1
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2
-Url:		http://www.aelog.org/
+Url:		https://www.aelog.org/
 Source0:	http://download.kde.org/stable/kronometer/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Core)
